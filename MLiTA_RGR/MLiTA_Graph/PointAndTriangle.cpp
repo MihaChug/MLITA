@@ -9,11 +9,12 @@ CPointAndTriangle::CPointAndTriangle(std::ifstream & fin)
 {
 	ReadInputFile(fin);
 	Font font;
-	font.loadFromFile("CyrilicOld.ttf");
+	font.loadFromFile("res/ARCADECLASSIC.ttf");
 	text = Text("", font, 35);
-	text.setColor(Color::Magenta);
+	text.setColor(Color::Yellow);
 	text.setPosition(10, 400);
 }
+
 int CPointAndTriangle::Area(sf::Vector2i & a, sf::Vector2i & b, sf::Vector2i & c)
 {
 	return abs((b.y - a.y)*(c.x - a.x) - (b.x - a.x)*(c.y - a.y));
@@ -36,9 +37,9 @@ bool CPointAndTriangle::CheckPoint()
 void CPointAndTriangle::Visualisation()
 {
 	circle.setFillColor(sf::Color::Black);
-	circle.setPosition((float)m_point.x + 300, (float)m_point.y + 300);
+	circle.setPosition((float)m_point.x + 298, (float)m_point.y + 298);
 
-	convex.setFillColor(sf::Color::Cyan);
+	convex.setFillColor(sf::Color::Green);
 	convex.setPointCount(3);
 
 	convex.setPoint(0, sf::Vector2f((float)m_trianglePoints[0].x + 300, (float)m_trianglePoints[0].y + 300));

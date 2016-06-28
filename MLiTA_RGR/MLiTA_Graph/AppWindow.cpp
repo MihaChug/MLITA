@@ -120,7 +120,6 @@ void CAppWindow::AskSaveOutput()
 
 void CAppWindow::InitializeText()
 {
-	//m_fontForText.loadFromFile("res/myFont.otf");
 	m_text = sf::Text("", m_fontForText, 12);
 	m_text.setColor(sf::Color::Black);
 }
